@@ -1,0 +1,17 @@
+# Major cities with population (longitude, latitude, population in millions)
+139.6503 35.6762 37.4     # Tokyo
+28.9784 41.0082 15.5      # Istanbul
+77.2090 28.6139 30.3      # Delhi
+121.4737 31.2304 27.1     # Shanghai
+-99.1332 19.4326 21.8     # Mexico City
+-46.6333 -23.5505 22.0    # São Paulo
+31.2357 30.0444 20.9      # Cairo
+72.8777 19.0760 20.4      # Mumbai
+116.4074 39.9042 20.5     # Beijing
+114.1095 22.3964 7.5      # Hong Kong
+-74.0060 40.7128 8.3      # New York
+103.8198 1.3521 5.9       # Singapore
+0.1278 51.5074 9.0        # London
+2.3522 48.8566 11.0       # Paris
+55.2708 25.2048 3.4       # Dubai
+37.6173 55.7558 12.5      # Moscow

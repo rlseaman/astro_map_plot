@@ -1,0 +1,88 @@
+# Observatory Operational Dates
+# Format: Code StartMJD EndMJD
+# EndMJD of -1 means still operational (ongoing)
+#
+# MJD reference dates:
+# Jan 1, 1990 = 47892
+# Jan 1, 2000 = 51544
+# Jan 1, 2010 = 55197
+# Jan 1, 2020 = 58849
+# Jan 1, 2025 = 60676
+#
+# Some example observatories with approximate dates:
+
+# Palomar Mountain (Mt. Palomar, California)
+675 40000 -1
+
+# Kitt Peak (Arizona)
+695 40000 -1
+
+# Mauna Kea (Hawaii)
+568 43000 -1
+
+# Apache Point Observatory (New Mexico)  
+705 48000 -1
+
+# McDonald Observatory (Texas)
+711 35000 -1
+
+# Lowell Observatory (Arizona)
+688 25000 -1
+
+# Lick Observatory (California)
+662 25000 -1
+
+# Mount Wilson Observatory (California)
+671 20000 58000
+
+# Yerkes Observatory (Wisconsin)
+754 20000 58000
+
+# European Southern Observatory, La Silla (Chile)
+809 43000 -1
+
+# Spacewatch (Kitt Peak, Arizona)
+691 47000 -1
+
+# LINEAR (New Mexico)
+704 50000 -1
+
+# Catalina Sky Survey (Arizona)
+703 52000 -1
+
+# Pan-STARRS 1, Haleakala (Hawaii)
+F51 55000 -1
+
+# Pan-STARRS 2, Haleakala (Hawaii)
+F52 57000 -1
+
+# ATLAS-MLO, Mauna Loa (Hawaii)
+T05 57000 -1
+
+# ATLAS-HKO, Haleakala (Hawaii)
+T08 57000 -1
+
+# Gaia Space Observatory
+500 56500 -1
+
+# Hubble Space Telescope
+250 48000 -1
+
+# WISE/NEOWISE
+C51 55200 -1
+
+# TESS
+C57 58200 -1
+
+# Vera Rubin Observatory / LSST (Chile, future)
+W84 62000 -1
+
+# Historical observatories (no longer active)
+# Heidelberg (Germany)
+024 10000 50000
+
+# Harvard College Observatory
+270 10000 55000
+
+# Mount Stromlo Observatory (Australia)  
+413 20000 52000

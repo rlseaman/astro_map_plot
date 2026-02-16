@@ -1,0 +1,36 @@
+# Historical development versions
+OLD/
+
+# Output files (large binaries)
+sandbox/*.mp4
+sandbox/*.gif
+sandbox/*.avi
+sandbox/*.webm
+sandbox/*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Config (user-specific)
+.mapplotrc
+
+# Temporary files
+*.tmp
+temp_*

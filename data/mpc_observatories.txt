@@ -1,0 +1,80 @@
+Code  Longitude  cos     sin     Parallax constants               Name
+
+000   0.00000  0.62932 +0.77306 +0.00000                      Greenwich
+001 358.81186  0.62932 +0.77306 +0.03400                      Crowborough
+002 242.62605  0.84285 +0.53602 +0.09000                      Rayleigh
+003 301.32870  0.77197 +0.63614 +0.26000                      Goethe Link Observatory, Indiana
+004  19.05530  0.61800 +0.78397 +0.01900                      Observatorio Astronomico de Mallorca
+005  43.79900  0.61750 +0.78426 +0.01600                      Observatoire de Chalandray, Lausanne
+006 151.21530  0.87756 -0.47849 +0.01200                      Canberra, Mount Stromlo
+007 149.06580  0.88041 -0.47228 +0.06100                      Siding Spring Observatory-DSS
+008 262.16730  0.85437 +0.51765 +1.24000                      Lowell Observatory-Anderson Mesa Station
+009 255.98830  0.82673 +0.56205 +2.23700                      Mauna Kea
+010 355.82110  0.62916 +0.77319 +0.02800                      Armagh Observatory
+011 357.93110  0.62782 +0.77430 +0.10000                      Lord's Bridge
+012   5.81050  0.76838 +0.63782 +0.26600                      European Southern Observatory, La Silla
+013 288.44340  0.76500 +0.64181 +0.38000                      Lick Observatory, Mount Hamilton
+014 249.26830  0.85438 +0.51761 +1.24200                      Table Mountain Observatory
+015 111.61040  0.87626 -0.47953 +0.04800                      Perth Observatory, Bickley
+016 239.72800  0.84335 +0.53524 +0.17300                      Palomar Mountain-Oschin Schmidt
+017 239.66160  0.84337 +0.53530 +1.69600                      Palomar Mountain
+033 243.13410  0.84275 +0.53627 +0.10400                      Mount Wilson
+036 289.58480  0.73717 +0.67383 +0.31900                      Leuschner Observatory, Lafayette
+037 239.68230  0.84337 +0.53526 +1.70600                      Palomar Mountain-Hale
+043 250.89500  0.84878 +0.52793 +1.15900                      McDonald Observatory, Fort Davis
+044 284.58200  0.73724 +0.67373 +0.31000                      Leuschner Observatory, Berkeley
+045 283.93550  0.73725 +0.67372 +0.35000                      Leuschner Observatory, Lafayette
+046 285.53000  0.75869 +0.65061 +0.41000                      Yerkes Observatory, Williams Bay
+051   5.82117  0.76838 +0.63782 +0.24200                      European Southern Observatory, La Silla
+052   5.73550  0.76838 +0.63782 +0.24200                      European Southern Observatory, La Silla
+053 242.82030  0.82968 +0.55757 +1.56600                      Leoncito Astronomical Complex
+054 255.49200  0.76832 +0.63789 +1.34000                      Cerro Tololo
+055   6.04950  0.76836 +0.63784 +0.24000                      European Southern Observatory, La Silla
+056 355.75200  0.62903 +0.77330 +0.08000                      Cambridge
+057   2.30850  0.85912 +0.51117 +0.54800                      Observatoire de Haute-Provence
+058   5.71250  0.76833 +0.63788 +0.24000                      European Southern Observatory, La Silla
+059 359.33770  0.62792 +0.77418 +0.05000                      Guildford
+089 291.63350  0.74872 +0.66142 +0.86200                      Lowell Observatory, Flagstaff
+095 359.91310  0.63179 +0.77473 +0.01000                      Boyden Observatory, Maselspoort
+106 300.75450  0.77200 +0.63611 +0.26000                      Goethe Link Observatory, Brooklyn
+260 323.16210  0.85926 +0.51093 +0.12700                      Vainu Bappu Observatory, Kavalur
+267 287.39210  0.61740 +0.78436 +0.50000                      Puckett Observatory, Mountain Town
+309 260.67120  0.51829 +0.85437 +3.33900                      Mauna Kea
+322 227.27680  0.84275 +0.53627 +0.47000                      Steward Observatory, Kitt Peak-Spacewatch
+413 239.66160  0.84337 +0.53530 +1.71200                      Palomar Mountain-NEAT
+461 344.36670  0.78813 +0.61419 +1.02000                      Observatorio Astronomico de Begues
+474  10.23100  0.61471 +0.78594 +0.04600                      Englewood
+500 204.52670  0.59280 +0.80416 +2.00700                      Geocentric Occultation Observer
+568 254.40920  0.85437 +0.51762 +1.06000                      Mauna Kea-UH/Tholen NEA Survey
+586 266.42350  0.51744 +0.85476 +4.19500                      Haleakala-AMOS
+595 356.47610  0.60976 +0.79095 +0.19000                      Observatory Tomar
+599   9.30750  0.61728 +0.78643 +0.21000                      Sonoita Research Observatory
+620 211.66270  0.85417 +0.51807 +1.49000                      Catalina Sky Survey
+644 285.48350  0.75868 +0.65062 +0.35000                      Palomar Mountain/NEAT
+645 261.57170  0.84273 +0.53632 +0.63600                      Zeno Observatory
+658 265.72580  0.51741 +0.85479 +3.07500                      Haleakala-NEAT/GEODSS
+673 266.05080  0.51747 +0.85473 +3.03900                      Table Mountain Observatory/NEAT
+675 211.63360  0.85415 +0.51811 +1.48300                      Mount Lemmon Survey
+691 249.20480  0.85436 +0.51766 +1.19900                      Steward Observatory, Kitt Peak
+695 355.74380  0.62903 +0.77330 +0.01800                      Asterdata Observatory
+699 211.64770  0.85416 +0.51809 +1.48600                      Catalina Sky Survey
+703 239.66150  0.84337 +0.53530 +1.71300                      Catalina Sky Survey
+704 211.66240  0.85417 +0.51807 +1.48800                      Lincoln Laboratory ETS, New Mexico
+705 239.66190  0.84337 +0.53530 +1.71200                      Mount Lemmon Survey
+734   9.14667  0.61765 +0.78610 +0.00800                      Black Oak Observatory, Laytonville
+807   2.32670  0.85912 +0.51117 +0.65100                      Observatoire de Haute-Provence
+809   4.85810  0.76838 +0.63782 +0.32800                      Observatoire de la Côte d'Azur, Nice
+950   5.71330  0.76838 +0.63782 +0.24000                      La Silla-ATLAS
+G45 211.64730  0.85416 +0.51809 +1.48500                      Mount Lemmon
+G96 211.65360  0.85417 +0.51807 +1.48800                      Mount Lemmon
+I11 211.64560  0.85416 +0.51809 +1.48600                      Mt. Lemmon Survey
+J04 285.48600  0.75869 +0.65061 +0.35000                      ATLAS-MLO, Mauna Loa
+J75 204.52670  0.59280 +0.80416 +2.00700                      OAM Observatory, La Sagra
+T09 239.66150  0.84337 +0.53530 +1.71300                      ATLAS-HKO, Haleakala
+T12 204.52670  0.59280 +0.80416 +2.00700                      ATLAS-HKO, Haleakala
+T14 204.52670  0.59280 +0.80416 +2.00700                      ATLAS-MLO, Mauna Loa
+V37 211.65360  0.85417 +0.51807 +1.48800                      Catalina Sky Survey
+W84 211.65360  0.85417 +0.51807 +1.48800                      Catalina Sky Survey
+W85 211.65360  0.85417 +0.51807 +1.48800                      Catalina Sky Survey
+W86 211.65360  0.85417 +0.51807 +1.48800                      Catalina Sky Survey
+W87 211.65360  0.85417 +0.51807 +1.48800                      Catalina Sky Survey
