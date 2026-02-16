@@ -4,19 +4,15 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
-MAPPLOT="$ROOT_DIR/src/mapplot"
 DATA_DIR="$ROOT_DIR/data"
 OUTPUT_DIR="$ROOT_DIR/sandbox"
-
-# Ensure mapplot is executable
-chmod +x "$MAPPLOT"
 
 echo "Sky Mapping Demonstration"
 echo "========================="
 echo ""
 
 echo "1. Basic sky map with bright star catalog..."
-"$MAPPLOT" --sky --catalog -p mollweide -g \
+python -m mapplot --catalog -p mollweide -g \
   --grid-spacing 15 15 \
   --bgcolor black --grid-color white --grid-alpha 0.3 \
   -o "$OUTPUT_DIR/demo_sky_basic.png" \
@@ -26,7 +22,7 @@ echo "Created: $OUTPUT_DIR/demo_sky_basic.png"
 echo ""
 
 echo "2. Sky map with ecliptic and galactic plane..."
-"$MAPPLOT" --sky --catalog --ecliptic --galactic-plane \
+python -m mapplot --catalog --ecliptic --galactic-plane \
   -p hammer -g --grid-spacing 15 15 \
   --bgcolor black --grid-color cyan --grid-alpha 0.3 \
   --legend \
@@ -37,7 +33,7 @@ echo "Created: $OUTPUT_DIR/demo_sky_overlays.png"
 echo ""
 
 echo "3. Sky map with Milky Way density..."
-"$MAPPLOT" --sky --catalog --galactic-plane --milky-way \
+python -m mapplot --catalog --galactic-plane --milky-way \
   -p mollweide -g --grid-spacing 30 15 \
   --bgcolor black --grid-color white --grid-alpha 0.2 \
   --legend \
@@ -48,7 +44,7 @@ echo "Created: $OUTPUT_DIR/demo_milky_way.png"
 echo ""
 
 echo "4. Galactic coordinate system view..."
-"$MAPPLOT" --sky --catalog --ecliptic \
+python -m mapplot --catalog --ecliptic \
   --plot-coord galactic \
   -p aitoff -g --grid-spacing 30 15 \
   --bgcolor navy --grid-color yellow --grid-alpha 0.4 \
@@ -60,7 +56,7 @@ echo "Created: $OUTPUT_DIR/demo_galactic_coords.png"
 echo ""
 
 echo "5. Ecliptic coordinate system view..."
-"$MAPPLOT" --sky --catalog --galactic-plane \
+python -m mapplot --catalog --galactic-plane \
   --plot-coord ecliptic \
   -p hammer -g --grid-spacing 30 15 \
   --bgcolor midnightblue --grid-color gold --grid-alpha 0.4 \
@@ -72,7 +68,7 @@ echo "Created: $OUTPUT_DIR/demo_ecliptic_coords.png"
 echo ""
 
 echo "6. Custom objects (Messier catalog) in equatorial coordinates..."
-"$MAPPLOT" --sky --catalog --ecliptic --galactic-plane \
+python -m mapplot --catalog --ecliptic --galactic-plane \
   -p mollweide -g --grid-spacing 15 15 \
   --bgcolor black --grid-color white --grid-alpha 0.2 \
   -m diamond -c cyan -s 100 \
@@ -85,7 +81,7 @@ echo "Created: $OUTPUT_DIR/demo_messier.png"
 echo ""
 
 echo "7. High-resolution publication figure..."
-"$MAPPLOT" --sky --catalog --max-magnitude 5.0 \
+python -m mapplot --catalog --max-magnitude 5.0 \
   --ecliptic --galactic-plane --milky-way \
   -p robinson -g --grid-spacing 15 15 \
   --bgcolor black --grid-color lightgray --grid-alpha 0.25 \
@@ -99,7 +95,7 @@ echo ""
 
 echo "8. Different projections comparison..."
 for proj in mollweide hammer aitoff robinson eckert4; do
-  "$MAPPLOT" --sky --catalog --ecliptic --galactic-plane \
+  python -m mapplot --catalog --ecliptic --galactic-plane \
     -p $proj -g --grid-spacing 30 15 \
     --bgcolor black --grid-color white --grid-alpha 0.3 \
     -o "$OUTPUT_DIR/demo_proj_${proj}.png" \
@@ -121,7 +117,7 @@ cat > "$TMPFILE" << EOF
 135 -30
 EOF
 
-"$MAPPLOT" --sky --catalog \
+python -m mapplot --catalog \
   --input-coord galactic --plot-coord equatorial \
   -p mollweide -g --grid-spacing 15 15 \
   --bgcolor black --grid-color white --grid-alpha 0.3 \
@@ -136,7 +132,7 @@ rm "$TMPFILE"
 
 echo ""
 echo "10. Terrestrial map for comparison..."
-"$MAPPLOT" -p robinson -g --grid-spacing 30 15 \
+python -m mapplot -p robinson -g --grid-spacing 30 15 \
   --coastlines --countries \
   --grid-color blue --grid-alpha 0.5 \
   -o "$OUTPUT_DIR/demo_earth.png" \

@@ -24,78 +24,86 @@ and terrestrial data, with support for animated time-series visualization.
 - Keyframe summary frames
 - Output to MP4, GIF, AVI, or WebM
 
+## Installation
+
+```bash
+# Install in development mode (recommended for local use)
+pip install -e .
+
+# Or install normally
+pip install .
+
+# For animation support (MP4 output)
+brew install ffmpeg    # macOS
+# or: sudo apt-get install ffmpeg   # Debian/Ubuntu
+```
+
 ## Quick Start
 
 ```bash
-# Install dependencies
-pip install matplotlib cartopy numpy astropy pyyaml
-
-# For MP4 animation output
-brew install ffmpeg    # macOS
-# or: sudo apt-get install ffmpeg   # Debian/Ubuntu
-
 # Basic star map
-./src/mapplot --catalog -p mollweide -g
+mapplot --catalog -p mollweide -g
 
 # Earth map with cities
-./src/mapplot --earth data/example_cities.txt -p robinson --coastlines -g
+mapplot --earth data/example_cities.txt -p robinson --coastlines -g
 
 # Animate asteroid observations
-./src/mapplot --animate data/example_solar_relative.txt --ecliptic -o sandbox/test.mp4
+mapplot --animate data/example_solar_relative.txt --ecliptic -o sandbox/test.mp4
+
+# Full help
+mapplot --help
+
+# Check version
+mapplot --version
+
+# Alternative: run as Python module
+python -m mapplot --catalog -p mollweide -g
 ```
 
 ## Repository Structure
 
 ```
 astro_map_plot/
-  src/              Main source code
-    mapplot           Primary executable (Python 3)
-    download_bsc5.py  Script to download full BSC5 catalog
-    install.sh        System-wide installation script
-    mapplotrc.example YAML configuration template
-  docs/             Documentation
-    QUICKREF.md       Command reference with examples
-    ANIMATION.md      Core animation guide
-    ANIMATION_ADVANCED.md  Advanced animation techniques
-    COLORS_AND_CONFIG.md   Color palettes and YAML configuration
-    SOLAR_RELATIVE.md      Solar-relative coordinate system
-    OBSERVATORIES.md       MPC observatory database usage
-    OBSERVATORY_ANIMATION.md  Animating observatory operational dates
-    GRID_LABELS.md         Grid labels and cardinal directions
-    NEW_FEATURES.md        Coordinate poles, independent grids
-    VERSION_2.0_RELEASE_NOTES.md  v2.0 release notes
-    CHANGELOG.md           Consolidated development history
-  data/             Input data files
-    bsc5_data.txt     Bright Star Catalog v5 (5,704 stars)
-    mpc_observatories.txt  MPC observatory codes and positions
-    example_*.txt     Example datasets (cities, Messier objects, etc.)
-    mjd_ra_dec_*.txt  Asteroid ephemeris data with MJD timestamps
-    ra_dec_*.txt      Asteroid ephemeris data (RA/Dec only)
-    neos_*.txt        NEO survey data binned by magnitude
-    ast_*.txt         Asteroid type classification data
-  scripts/          Shell scripts
-    demo_sky.sh       Generate demonstration sky maps
-    test.sh           Basic functionality tests
-    test_animation.sh Animation feature tests
-  sandbox/          Output files (plots, videos)
-  OLD/              Historical development versions (not tracked)
+  pyproject.toml        Package metadata and dependencies
+  src/mapplot/          Python package
+    __init__.py           Version string
+    __main__.py           python -m mapplot support
+    cli.py                Argument parser
+    config.py             Configuration and color palettes
+    constants.py          Projections, markers
+    coordinates.py        Coordinate transforms, sun position, MJD utilities
+    geometry.py           Ecliptic, galactic plane, equator paths, poles
+    catalog.py            BSC5 star catalog loading
+    observatories.py      MPC observatory database
+    data_io.py            Data file reading
+    plotting.py           Static map plotting
+    animation.py          Animation engine
+    core.py               Main orchestration and entry point
+  data/                 Input data files
+    bsc5_data.txt         Bright Star Catalog v5 (5,704 stars)
+    mpc_observatories.txt MPC observatory codes and positions
+    example_*.txt         Example datasets
+  docs/                 Documentation
+  scripts/              Shell scripts (demo, test)
+  sandbox/              Output files (plots, videos)
+  tests/                Unit tests
 ```
 
 ## Usage Examples
 
 ```bash
 # Star map with reference lines
-./src/mapplot --catalog --ecliptic --galactic-plane --celestial-equator \
+mapplot --catalog --ecliptic --galactic-plane --celestial-equator \
   -p hammer -g --cardinal
 
 # Solar-relative asteroid plot
-./src/mapplot --solar-relative data/mjd_ra_dec_near_22.txt --ecliptic -g
+mapplot --solar-relative data/mjd_ra_dec_near_22.txt --ecliptic -g
 
 # Observatory locations
-./src/mapplot --earth --observatories -p mercator --coastlines
+mapplot --earth --observatories -p mercator --coastlines
 
 # Multi-object animation with trails
-./src/mapplot --animate data/mjd_ra_dec_near_22.txt data/mjd_ra_dec_far_22.txt \
+mapplot --animate data/mjd_ra_dec_near_22.txt data/mjd_ra_dec_far_22.txt \
   --legend --labels "Near-Earth" "Distant" \
   --palette tableau10 \
   --trail-days 60 --trail-fade \
@@ -104,7 +112,7 @@ astro_map_plot/
   -o sandbox/survey.mp4
 
 # Publication-quality figure
-./src/mapplot --catalog --max-magnitude 5.0 \
+mapplot --catalog --max-magnitude 5.0 \
   --ecliptic --galactic-plane --milky-way \
   -p robinson -g --grid-spacing 15 15 \
   --bgcolor black --grid-color lightgray --grid-alpha 0.25 \
@@ -114,7 +122,7 @@ astro_map_plot/
 
 ## Configuration
 
-Copy `src/mapplotrc.example` to `~/.mapplotrc` and edit to set default
+Copy `src/mapplot/mapplotrc.example` to `~/.mapplotrc` and edit to set default
 preferences for projection, colors, grid spacing, and other options.
 
 ```yaml
@@ -132,10 +140,22 @@ grid:
 
 ## Dependencies
 
-**Required:** Python 3.7+, matplotlib, cartopy, numpy, astropy
+**Required:** Python 3.10+, matplotlib, cartopy, numpy, astropy
 
 **Optional:** pyyaml (configuration files), ffmpeg (MP4 output),
 pillow (GIF output)
+
+## Testing
+
+```bash
+# Run unit tests
+python -m pytest tests/
+
+# Run integration tests
+scripts/test.sh
+scripts/test_animation.sh
+scripts/demo_sky.sh
+```
 
 ## Documentation
 

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mapplot"
+version = "2.1.0"
+description = "Command-line tool for plotting geographic and celestial data on map projections"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib",
+    "cartopy",
+    "numpy",
+    "astropy",
+]
+
+[project.optional-dependencies]
+yaml = ["pyyaml"]
+gif = ["pillow"]
+all = ["pyyaml", "pillow"]
+
+[project.scripts]
+mapplot = "mapplot.core:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mapplot = ["mapplotrc.example", "download_bsc5.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

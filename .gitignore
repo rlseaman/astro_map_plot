@@ -1,6 +1,3 @@
-# Historical development versions
-OLD/
-
 # Output files (large binaries)
 sandbox/*.mp4
 sandbox/*.gif
@@ -16,6 +13,8 @@ __pycache__/
 .eggs/
 dist/
 build/
+.venv/
+.pytest_cache/
 
 # OS files
 .DS_Store
